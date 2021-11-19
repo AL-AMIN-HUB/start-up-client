@@ -19,7 +19,7 @@ const NewsLetter = () => {
                 style={{ background: "#44CE6F", border: "none", padding: "16px 50px", color: "#fff", borderRadius: "0 30px 30px 0" }}
                 className="my-2 my-md-0 btn"
               >
-                Button
+                Sign Up Free
               </button>
             </div>
 
