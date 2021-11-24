@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./NewsLetter.css";
 
 const NewsLetter = () => {
   return (
@@ -12,15 +14,15 @@ const NewsLetter = () => {
             <h2>Start your free trial</h2>
             <div className="my-3">
               <input
+                className="input-news"
                 placeholder="Enter your business here"
-                style={{ background: "#0E314C", color: "#fff", padding: "16px", border: "none", width: "380px", borderRadius: "30px 0 0 30px" }}
+                style={{ background: "#0E314C", color: "#fff", border: "none", width: "380px" }}
               />
-              <button
-                style={{ background: "#44CE6F", border: "none", padding: "16px 50px", color: "#fff", borderRadius: "0 30px 30px 0" }}
-                className="my-2 my-md-0 btn"
-              >
-                Sign Up Free
-              </button>
+              <Link className="text-decoration-none" to="/register">
+                <button style={{ background: "#44CE6F", border: "none", color: "#fff" }} className="my-2 my-md-0 btn button-news">
+                  Sign Up Free
+                </button>
+              </Link>
             </div>
 
             <p>

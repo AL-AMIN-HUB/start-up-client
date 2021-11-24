@@ -1,0 +1,22 @@
+.card-service {
+  position: relative;
+}
+
+.link-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-service:hover {
+  background-color: rgba(128, 128, 128, 0.376);
+  transform: translateY(-10px);
+  transition: background 1s;
+  transition: 1s;
+}
+
+.card-service:hover .link-button {
+  display: block;
+}

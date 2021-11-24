@@ -1,9 +1,11 @@
 import React from "react";
+import Menubar from "../Home/Menubar/Menubar";
 
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <Menubar />
+      <h2 style={{ padding: "100px 0" }}>About</h2>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import History from "./History/History";
 import HomeAbout from "./HomeAbout/HomeAbout";
 import Menubar from "./Menubar/Menubar";
 import NewsLetter from "./NewsLetter/NewsLetter";
+import Services from "./Services/Services";
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
@@ -35,6 +36,7 @@ const Home = () => {
         <Banner />
         <Feature />
         <HomeAbout />
+        <Services />
         <Fd />
         <History />
         <NewsLetter />

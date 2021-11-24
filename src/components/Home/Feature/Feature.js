@@ -3,7 +3,7 @@ import { Card, Col, Row } from "react-bootstrap";
 
 const Feature = () => {
   return (
-    <div className="py-5 my-5">
+    <div  className="py-5 my-5 feature">
       <div className="text-center pb-5">
         <p style={{ background: "#F5DFFD", width: "150px", borderRadius: "30px" }} className=" py-1 px-2 mx-auto">
           <small> What We Offer</small>

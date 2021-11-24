@@ -54,7 +54,7 @@ const Footer = () => {
             <small className="ms-2">Email: alaminsbl502@gmail.com</small>
           </p>{" "}
           <p>
-            <i class="fas fa-phone-volume"></i>
+            <i className="fas fa-phone-volume"></i>
             <small className="ms-2">Phone: +880 1906221552</small>
           </p>
           <i
@@ -66,6 +66,7 @@ const Footer = () => {
           <i style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px", borderRadius: "50%" }} className="fab m-2 fa-linkedin-in icon4"></i>
         </div>{" "}
       </div>
+      <p className="lead text-center text-muted"> Copyright &copy; All right reserved by Al Amin</p>
     </div>
   );
 };

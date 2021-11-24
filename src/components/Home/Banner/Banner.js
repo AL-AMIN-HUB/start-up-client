@@ -3,13 +3,13 @@ import React from "react";
 const banner = {
   backgroundImage: "url(https://i.ibb.co/xGbGtY6/banner-bg.jpg)",
   backgroundSize: "cover",
-  height: " 800px",
+  height: " 950px",
 };
 const Banner = () => {
   return (
     <>
-      <div style={banner} className="d-flex justify-content-between align-items-end">
-        <div className="row w-75 mx-auto ">
+      <div style={banner} className="d-flex justify-content-between align-items-center">
+        <div className="row w-75 mx-auto">
           <div className="col-md-6 col-12 text-center text-md-start">
             <div className="d-flex justify-content-center align-items-center h-100">
               <div>

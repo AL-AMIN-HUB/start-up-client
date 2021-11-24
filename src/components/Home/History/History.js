@@ -18,7 +18,7 @@ const History = () => {
       </div>
       <Row xs={1} sm={1} md={3} className="g-4 text-start">
         <Col>
-          <Card className="border-0 shadow">
+          <Card style={{ cursor: "pointer" }} className="border-0 shadow">
             <Card.Img variant="top" className="img-fluid" src="https://i.ibb.co/hCdg4NN/blog9.jpg" />
             <Card.Body className="history-card">
               <Card.Title>
@@ -42,7 +42,7 @@ const History = () => {
           </Card>
         </Col>{" "}
         <Col>
-          <Card className="border-0 shadow">
+          <Card style={{ cursor: "pointer" }} className="border-0 shadow">
             <Card.Img variant="top" className="img-fluid" src="https://i.ibb.co/fGQ6LBC/blog10.jpg" />
             <Card.Body className="history-card">
               <Card.Title>
@@ -66,7 +66,7 @@ const History = () => {
           </Card>
         </Col>
         <Col>
-          <Card className="border-0 shadow">
+          <Card style={{ cursor: "pointer" }} className="border-0 shadow">
             <Card.Img variant="top" className="img-fluid" src="https://i.ibb.co/q7dZpjJ/blog11.jpg" />
             <Card.Body className="history-card">
               <Card.Title>
@@ -88,7 +88,7 @@ const History = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </Col>
+        </Col>ss
       </Row>
     </div>
   );

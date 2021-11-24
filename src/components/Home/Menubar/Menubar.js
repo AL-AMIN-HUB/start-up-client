@@ -31,22 +31,64 @@ const Menubar = () => {
             <Nav className="me-auto"></Nav>
 
             <Nav>
-              <NavLink className="text-decoration-none mx-3 display-inline-block pt-4  text-info" to="/home">
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                }
+                to="/home"
+              >
                 Home
               </NavLink>
-              <NavLink className="text-decoration-none mx-3 display-inline-block pt-4 text-info" to="/about">
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                }
+                to="/about"
+              >
                 About
               </NavLink>
-              <NavLink className="text-decoration-none mx-3 display-inline-block pt-4 text-info" to="/services">
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                }
+                to="/services"
+              >
                 Services
               </NavLink>
-              <NavLink className="text-decoration-none mx-3 display-inline-block pt-4 text-info" to="/shop">
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                }
+                to="/shop"
+              >
                 Shop
               </NavLink>
-              <NavLink className="text-decoration-none mx-3 display-inline-block pt-4 text-info" to="/blog">
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                }
+                to="/blog"
+              >
                 Blog
               </NavLink>
-              <NavLink className="text-decoration-none mx-3 display-inline-block pt-4 text-info" to="/contact">
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                }
+                to="/contact"
+              >
                 Contact
               </NavLink>
               <NavLink to="/support">
