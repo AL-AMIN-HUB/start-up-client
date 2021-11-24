@@ -104,7 +104,7 @@
   background-color: #23bdb857;
   height: "4px";
   display: inline-block;
-  width: 90px;
+  width: 100px;
   padding: 3px;
   border-radius: 2px;
   position: relative;
@@ -127,7 +127,7 @@
 
 @keyframes run {
   100% {
-    transform: translateX(80px);
+    transform: translateX(90px);
   }
 }
 
@@ -146,6 +146,7 @@
   line-height: 50px;
   text-decoration: none;
   border-radius: 10px 0 0 10px;
+  z-index: 1;
 }
 .gotoUp:hover {
   transform: translateY(-5px);

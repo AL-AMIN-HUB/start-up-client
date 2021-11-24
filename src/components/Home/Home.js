@@ -8,6 +8,7 @@ import HomeAbout from "./HomeAbout/HomeAbout";
 import Menubar from "./Menubar/Menubar";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import Services from "./Services/Services";
+import SliderProject from "./SliderProject/SliderProject";
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
@@ -38,6 +39,7 @@ const Home = () => {
         <HomeAbout />
         <Services />
         <Fd />
+        <SliderProject />
         <History />
         <NewsLetter />
         <Footer />

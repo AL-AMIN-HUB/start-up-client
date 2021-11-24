@@ -1,0 +1,29 @@
+.project-img {
+  position: relative;
+  transition: 0.5s;
+}
+.plus {
+  display: none;
+  padding: 10px 25px;
+  background-color: #44ce6f;
+  font-size: 40px;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  transition: 0.5s;
+}
+
+.project-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.plus:hover {
+  background-color: #c679e3;
+}
+
+.project-img:hover .plus {
+  display: inline-block;
+}

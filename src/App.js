@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+// import "swiper/css/bundle";
 import About from "./components/About/About";
 import Error from "./components/Home/Error/Error";
 import Home from "./components/Home/Home";
