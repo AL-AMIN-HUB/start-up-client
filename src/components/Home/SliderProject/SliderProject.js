@@ -4,6 +4,10 @@ import "./SliderProject.css";
 import "swiper/swiper.scss";
 
 // install Swiper modules
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+
+// install Swiper modules
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 const SliderProject = () => {
   const firstSlide = {
     href: "https://assignment12-d75c2.web.app/",
@@ -56,8 +60,8 @@ const SliderProject = () => {
       </div>
       <div>
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
+          /*  slidesPerView={4}
+          spaceBetween={40} */
           slidesPerGroup={2}
           loop={true}
           loopFillGroupWithBlank={true}
@@ -65,6 +69,25 @@ const SliderProject = () => {
             clickable: true,
           }}
           navigation={true}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
         >
           <SwiperSlide className="shadow overflow-hidden">
             <div className="project-img">
@@ -160,7 +183,7 @@ const SliderProject = () => {
               </a>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="shadow">
+          <SwiperSlide className="shadow overflow-hidden">
             <div className="project-img">
               <img
                 className="img-fluid"

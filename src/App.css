@@ -31,8 +31,9 @@
 .primary-btn3 {
   color: #000;
   background-color: #fff !important;
-  border: 1px dashed #23bdb8;
+  border: 1px dashed #23bdb84f;
   padding: 14px 39px;
+  box-shadow: none;
 }
 
 .primary-btn1:hover,

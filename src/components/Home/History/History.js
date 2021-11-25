@@ -88,7 +88,7 @@ const History = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </Col>ss
+        </Col>
       </Row>
     </div>
   );

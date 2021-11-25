@@ -7,6 +7,7 @@ import History from "./History/History";
 import HomeAbout from "./HomeAbout/HomeAbout";
 import Menubar from "./Menubar/Menubar";
 import NewsLetter from "./NewsLetter/NewsLetter";
+import Pricing from "./Pricing/Pricing";
 import Services from "./Services/Services";
 import SliderProject from "./SliderProject/SliderProject";
 
@@ -40,6 +41,7 @@ const Home = () => {
         <Services />
         <Fd />
         <SliderProject />
+        <Pricing />
         <History />
         <NewsLetter />
         <Footer />
