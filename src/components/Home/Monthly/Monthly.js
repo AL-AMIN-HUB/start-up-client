@@ -54,7 +54,7 @@ const Monthly = () => {
         </div>
       </div>
       <div className="card border-0 col-md-4 col-12">
-        <div className=" history-card py-5 g-4 shadow rounded-3">
+        <div className=" history-card py-5 g-4 shadow-sm rounded-3">
           <div className="text-center mb-4">
             <h5>Standard</h5>
             <p>
