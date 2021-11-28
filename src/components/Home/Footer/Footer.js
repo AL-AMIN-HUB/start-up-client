@@ -1,6 +1,22 @@
 import React from "react";
 
 const Footer = () => {
+  const facebook = {
+    href: "https://www.facebook.com/profile.php?id=100036840630119",
+    target: "_blank",
+  };
+  const github = {
+    href: "https://github.com/AL-AMIN-HUB",
+    target: "_blank",
+  };
+  const instagram = {
+    href: "https://www.instagram.com/alaminkhan852/",
+    target: "_blank",
+  };
+  const linkedin = {
+    href: "https://www.linkedin.com/in/al-amin201/",
+    target: "_blank",
+  };
   const bg = {
     backgroundImage: "url(https://i.ibb.co/bJSFRVb/map.png)",
     backgroundSize: "cover",
@@ -57,18 +73,27 @@ const Footer = () => {
             <i className="fas fa-phone-volume"></i>
             <small className="ms-2">Phone: +880 1906221552</small>
           </p>
-          <i
-            style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px 13px", borderRadius: "50%" }}
-            className="fab  m-2 fa-facebook-f icon1"
-          ></i>
-          <i style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px", borderRadius: "50%" }} className="fab m-2 fa-twitter icon2"></i>
-          <i style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px", borderRadius: "50%" }} className="fab m-2 fa-instagram icon3"></i>
-          <i style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px", borderRadius: "50%" }} className="fab m-2 fa-linkedin-in icon4"></i>
+          <a {...facebook} className="text-decoration-none">
+            <i
+              style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px 13px", borderRadius: "50%" }}
+              className="fab  m-2 fa-facebook-f icon1"
+            ></i>
+          </a>
+          <a {...github} className="text-decoration-none">
+            <i style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px", borderRadius: "50%" }} className="fab m-2 fa-github icon2"></i>
+          </a>
+          <a {...instagram} className="text-decoration-none">
+            {" "}
+            <i style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px", borderRadius: "50%" }} className="fab m-2 fa-instagram icon3"></i>
+          </a>
+          <a {...linkedin} className="text-decoration-none">
+            {" "}
+            <i style={{ border: "1px solid rgb(0,255,0,0.3) ", padding: "10px", borderRadius: "50%" }} className="fab m-2 fa-linkedin-in icon4"></i>
+          </a>
         </div>{" "}
       </div>
       <p className="lead text-center text-muted"> Copyright &copy; All right reserved by Al Amin</p>
     </div>
   );
 };
-
 export default Footer;

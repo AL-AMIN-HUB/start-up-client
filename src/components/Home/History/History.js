@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import "./History.css";
 
 const History = () => {
   return (
@@ -18,8 +19,8 @@ const History = () => {
       </div>
       <Row xs={1} sm={1} md={3} className="g-4 text-start">
         <Col>
-          <Card style={{ cursor: "pointer" }} className="border-0 shadow">
-            <Card.Img variant="top" className="img-fluid" src="https://i.ibb.co/hCdg4NN/blog9.jpg" />
+          <Card style={{ cursor: "pointer" }} className="border-0 shadow history-service">
+            <Card.Img variant="top" className="img-fluid image" src="https://i.ibb.co/hCdg4NN/blog9.jpg" />
             <Card.Body className="history-card">
               <Card.Title>
                 <p>
@@ -42,8 +43,8 @@ const History = () => {
           </Card>
         </Col>{" "}
         <Col>
-          <Card style={{ cursor: "pointer" }} className="border-0 shadow">
-            <Card.Img variant="top" className="img-fluid" src="https://i.ibb.co/fGQ6LBC/blog10.jpg" />
+          <Card style={{ cursor: "pointer" }} className="border-0 shadow history-service">
+            <Card.Img variant="top" className="img-fluid image" src="https://i.ibb.co/fGQ6LBC/blog10.jpg" />
             <Card.Body className="history-card">
               <Card.Title>
                 <p>
@@ -66,9 +67,9 @@ const History = () => {
           </Card>
         </Col>
         <Col>
-          <Card style={{ cursor: "pointer" }} className="border-0 shadow">
-            <Card.Img variant="top" className="img-fluid" src="https://i.ibb.co/q7dZpjJ/blog11.jpg" />
-            <Card.Body className="history-card">
+          <Card style={{ cursor: "pointer" }} className="border-0 shadow history-service">
+            <Card.Img variant="top" className="img-fluid image" src="https://i.ibb.co/q7dZpjJ/blog11.jpg" />
+            <Card.Body className="history-card ">
               <Card.Title>
                 <p>
                   <small className="text-muted"> Admin / 19 Nov 2021</small>

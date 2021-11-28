@@ -1,12 +1,24 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import useFirebase from "../../../hooks/useFirebase";
+import Menubar from "../../Home/Menubar/Menubar";
 
 const Register = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { registerUser } = useFirebase();
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    if (data.password1 !== data.password2) {
+      window.confirm("Your password is incorrect,, please enter your correct password");
+    }
+    registerUser(data.email, data.password, data.name);
+    reset();
+  };
+
   return (
     <div>
+      <Menubar />
       <div className="login register-card ">
         <form onSubmit={handleSubmit(onSubmit)}>
           <img
@@ -16,10 +28,11 @@ const Register = () => {
             alt=""
           />
           <h3 className="text-muted text-center my-3">User Registration</h3>
-          <input type="text" placeholder="Full Name" {...register("name", { required: true })} />
-          <input type="email" placeholder="Email Address" {...register("email", { required: true })} />
-          <input type="password" placeholder="Password" {...register("password1")} />{" "}
-          <input type="password" placeholder="Confirm Password" {...register("password2")} /> <input value="Create Account" type="submit" />
+          <input name="name" type="text" placeholder="Full Name" {...register("name", { required: true })} />
+          <input name="email" type="email" placeholder="Email Address" {...register("email", { required: true })} />
+          <input name="password1" type="password" placeholder="Password" {...register("password1")} />{" "}
+          <input name="password2" type="password" placeholder="Confirm Password" {...register("password2")} />{" "}
+          <input value="Create Account" type="submit" />
         </form>
         <p className="lead text-center mt-3">
           <span className="para"> Already have an Account?</span>

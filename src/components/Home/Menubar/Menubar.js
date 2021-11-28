@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import useFirebase from "../../../hooks/useFirebase";
 
 const Menubar = () => {
+  const { user, logout } = useFirebase();
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {
@@ -91,12 +93,21 @@ const Menubar = () => {
               >
                 Contact
               </NavLink>
-              <NavLink to="/support">
-                <Button className="primary-btn3">SUPPORT</Button>
-              </NavLink>
-              <NavLink to="/login">
-                <Button className="primary-btn2">LOGIN</Button>
-              </NavLink>
+              {user?.email ? (
+                <>
+                  <NavLink to="/support">
+                    <Button className="primary-btn3">SUPPORT</Button>
+                  </NavLink>
+
+                  <Button onClick={logout} className="primary-btn2">
+                    LOGOUT
+                  </Button>
+                </>
+              ) : (
+                <NavLink to="/login">
+                  <Button className="primary-btn2">LOGIN</Button>
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
