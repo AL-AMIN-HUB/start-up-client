@@ -11,7 +11,7 @@ const Services = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <div className="my-5 history-card" style={{ padding: "100px 0" }}>
+    <div className="mb-5 history-card" style={{ padding: "100px 0", marginTop: "80px" }}>
       <div className="text-center pb-5">
         <p style={{ background: "#F5DFFD", width: "150px", borderRadius: "30px" }} className=" py-1 px-2 mx-auto">
           <small> Our Solutions</small>

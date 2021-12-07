@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useFirebase from "../../../hooks/useFirebase";
-import Menubar from "../../Home/Menubar/Menubar";
 
 const Register = () => {
   const { registerUser } = useFirebase();
@@ -15,10 +14,15 @@ const Register = () => {
     registerUser(data.email, data.password, data.name);
     reset();
   };
+  const bg = {
+    background: "url(https://cdn.analyticsvidhya.com/wp-content/uploads/2019/11/chi-square-scaled.jpg)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
 
   return (
-    <div>
-      <Menubar />
+    <div style={{ ...bg, height: "100vh" }}>
       <div className="login register-card ">
         <form onSubmit={handleSubmit(onSubmit)}>
           <img

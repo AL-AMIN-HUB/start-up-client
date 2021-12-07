@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useFirebase from "../../../hooks/useFirebase";
-import Menubar from "../../Home/Menubar/Menubar";
 import "./Login.css";
 
 const Login = () => {
@@ -10,9 +9,14 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
+  const bg = {
+    background: "url(https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F4357049%2Fde0bcb471b4c596efff161108f0ee76f%2Ftopic.jpg?generation=1595314580690707&alt=media)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
   return (
-    <div>
-      <Menubar />
+    <div style={{ ...bg, height: "100vh" }}>
       <div className="login history-card">
         <form onSubmit={handleSubmit(onSubmit)}>
           <img

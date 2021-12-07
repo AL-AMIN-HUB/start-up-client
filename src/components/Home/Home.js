@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import Banner from "./Banner/Banner";
 import Fd from "./Fd/Fd";
 import Feature from "./Feature/Feature";
-import Footer from "./Footer/Footer";
 import History from "./History/History";
 import HomeAbout from "./HomeAbout/HomeAbout";
-import Menubar from "./Menubar/Menubar";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import Pricing from "./Pricing/Pricing";
 import Services from "./Services/Services";
@@ -34,7 +32,6 @@ const Home = () => {
   return (
     <>
       <div>
-        <Menubar />
         <Banner />
         <Feature />
         <HomeAbout />
@@ -44,7 +41,6 @@ const Home = () => {
         <Pricing />
         <History />
         <NewsLetter />
-        <Footer />
       </div>
       <button style={{ border: "none" }} className={visible ? "gotoUp" : ""} onClick={scrollTop}>
         <i className="fas  fa-arrow-up"></i>

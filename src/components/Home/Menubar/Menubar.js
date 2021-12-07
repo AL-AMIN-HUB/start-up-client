@@ -32,7 +32,7 @@ const Menubar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
 
-            <Nav>
+            <Nav className="navbar-custom">
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive
