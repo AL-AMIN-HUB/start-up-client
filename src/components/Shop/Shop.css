@@ -1,0 +1,35 @@
+.banner {
+  position: relative;
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box {
+  position: relative;
+  cursor: pointer;
+}
+.img {
+  transition: 1s;
+}
+.box:hover .img {
+  transform: scale(1.05);
+}
+.btn-shop {
+  border: 1px solid #111;
+  background-color: #fff;
+  transition: 1s;
+  margin-top: 10px;
+  padding: 15px 0;
+}
+.box:hover .btn-shop {
+  background-color: #0e314c;
+  color: #fff;
+  border: none;
+}
+
+.rating-color {
+  color: #eac11d;
+}
