@@ -23,20 +23,20 @@ function App() {
         <Menubar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="home" element={<Home />} />
           <Route path="/" element={<Home />}>
-            <Route path="/month" element={<Monthly />} />
-            <Route path="/year" element={<Yearly />} />
+            <Route path="month" element={<Monthly />} />
+            <Route path="year" element={<Yearly />} />
           </Route>
-          <Route path="/about" element={<About />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/singleService/:id" element={<SingleService />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="about" element={<About />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="services" element={<Services />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="support" element={<Support />} />
+          <Route path="singleService/:id" element={<SingleService />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
