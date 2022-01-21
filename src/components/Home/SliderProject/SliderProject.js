@@ -42,7 +42,7 @@ const SliderProject = () => {
     target: "_blank",
   };
   return (
-    <div className="py-5 my-5">
+    <div className="py-5 my-5 w-75 mx-auto">
       <div className="container pb-5">
         <p style={{ background: "#F5DFFD", width: "150px", borderRadius: "30px" }} className=" py-1 px-2 text-center">
           <small> Our Projects</small>
@@ -80,12 +80,12 @@ const SliderProject = () => {
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 3,
-              spaceBetween: 30,
+              slidesPerView: 2,
+              spaceBetween: 20,
             },
             1024: {
-              slidesPerView: 4,
-              spaceBetween: 40,
+              slidesPerView: 3,
+              spaceBetween: 30,
             },
           }}
         >
@@ -174,7 +174,7 @@ const SliderProject = () => {
               <img
                 className="img-fluid"
                 style={{ minWidth: "450px", height: "473px" }}
-                src="https://i.ibb.co/vsMWtc5/screencapture-panda-e-commerce-by-alamin-netlify-app-2021-11-24-21-36-29.png"
+                src="https://i.ibb.co/tMkMd3J/screencapture.png"
                 alt=""
               />
               <a {...sevenSlide}>

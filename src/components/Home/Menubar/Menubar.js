@@ -95,11 +95,16 @@ const Menubar = () => {
               </NavLink>
               {user?.email ? (
                 <>
-                  <NavLink to="/support">
-                    <Button className="primary-btn3">SUPPORT</Button>
+                  <NavLink to="/cart">
+                    <div class="position-relative">
+                      <i class="fa fa-shopping-cart fs-3 pt-4 text-warning"></i>
+                      <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
+                        1<span class="visually-hidden">unread messages</span>
+                      </span>
+                    </div>
                   </NavLink>
 
-                  <Button onClick={logout} className="primary-btn2">
+                  <Button onClick={logout} className="primary-btn2 ms-5">
                     LOGOUT
                   </Button>
                 </>

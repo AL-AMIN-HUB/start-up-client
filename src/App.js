@@ -14,7 +14,7 @@ import Yearly from "./components/Home/Yearly/Yearly";
 import Login from "./components/Shared/Login/Login";
 import Register from "./components/Shared/Register/Register";
 import Shop from "./components/Shop/Shop";
-import Support from "./components/Support/Support";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="blog" element={<Blog />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="support" element={<Support />} />
+          <Route path="cart" element={<Cart/>} />
           <Route path="singleService/:id" element={<SingleService />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
