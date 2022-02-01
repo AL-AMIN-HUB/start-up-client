@@ -253,3 +253,11 @@ scroll bar */
   background: #44ce6f;
   border-radius: 10px;
 }
+
+/* handle tap */
+.content {
+  display: none;
+}
+.active-content {
+  display: block;
+}

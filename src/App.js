@@ -7,10 +7,8 @@ import Error from "./components/Home/Error/Error";
 import Footer from "./components/Home/Footer/Footer";
 import Home from "./components/Home/Home";
 import Menubar from "./components/Home/Menubar/Menubar";
-import Monthly from "./components/Home/Monthly/Monthly";
 import Services from "./components/Home/Services/Services";
 import SingleService from "./components/Home/Services/SingleService/SingleService";
-import Yearly from "./components/Home/Yearly/Yearly";
 import Login from "./components/Shared/Login/Login";
 import Register from "./components/Shared/Register/Register";
 import Shop from "./components/Shop/Shop";
@@ -24,16 +22,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
-          <Route path="/" element={<Home />}>
-            <Route path="month" element={<Monthly />} />
-            <Route path="year" element={<Yearly />} />
-          </Route>
           <Route path="about" element={<About />} />
           <Route path="shop" element={<Shop />} />
           <Route path="services" element={<Services />} />
           <Route path="blog" element={<Blog />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="cart" element={<Cart/>} />
+          <Route path="cart" element={<Cart />} />
           <Route path="singleService/:id" element={<SingleService />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />

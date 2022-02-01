@@ -1,8 +1,16 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useState } from "react";
 import "./Pricing.css";
+import "../Yearly/Yearly";
+import Yearly from "../Yearly/Yearly";
+import Monthly from "../Monthly/Monthly";
 
 const Pricing = () => {
+  const [toggleState, setToggleState] = useState(1);
+
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
+
   return (
     <div className="my-5 py-5">
       <div>
@@ -19,16 +27,21 @@ const Pricing = () => {
           </p>
         </div>
         <div className="text-center pb-5 mb-4">
-          <Link className="text-decoration-none" to="/month">
-            <button className="button1">Monthly Plan</button>
-          </Link>
+          <button autoFocus onClick={() => toggleTab(1)} className="button1">
+            Monthly Plan
+          </button>
 
-          <Link className="text-decoration-none" to="/year">
-            <button className="button2">Yearly Plan</button>
-          </Link>
+          <button onClick={() => toggleTab(2)} className="button2">
+            Yearly Plan
+          </button>
         </div>
         <div className="container mx-auto">
-          <Outlet />
+          <div className={toggleState === 1 ? "content  active-content" : "content"}>
+            <Monthly />
+          </div>
+          <div className={toggleState === 2 ? "content  active-content" : "content"}>
+            <Yearly />
+          </div>
         </div>
       </div>
     </div>

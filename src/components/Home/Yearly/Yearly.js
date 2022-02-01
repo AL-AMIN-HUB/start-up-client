@@ -62,7 +62,7 @@ const Yearly = () => {
               </small>
             </p>
             <h2>
-              <b>$ 1299</b>/y
+              <b>$ 379</b>/y
             </h2>
             <Link className="text-decoration-none" to="/">
               <button className="my-2 my-md-0 btn px-4 py-2 price-btn">Start 3 Days Free Trial</button>
@@ -105,7 +105,7 @@ const Yearly = () => {
               </small>
             </p>
             <h2>
-              <b>$ 1500</b>/y
+              <b>$ 599</b>/y
             </h2>
             <Link className="text-decoration-none" to="/">
               <button className="my-2 my-md-0 btn px-4 py-2 price-btn">Start 6 Days Free Trial</button>
