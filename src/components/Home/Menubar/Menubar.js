@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import useFirebase from "../../../hooks/useFirebase";
+import useAuth from "../../../hooks/useAuth";
 
 const Menubar = () => {
-  const { user, logout } = useFirebase();
+  const { user, logout } = useAuth();
   const [navbar, setNavbar] = useState(false);
 
   const changeBg = () => {

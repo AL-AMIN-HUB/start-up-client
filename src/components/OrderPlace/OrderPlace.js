@@ -4,10 +4,10 @@ import "./OrderPlace.css";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import useFirebase from "../../hooks/useFirebase";
+import useAuth from "../../hooks/useAuth";
 
 const OrderPlace = () => {
-  const { user } = useFirebase();
+  const { user } = useAuth();
   const { productId } = useParams();
   const [product, setProduct] = useState({});
   const { register, handleSubmit, reset } = useForm();
@@ -27,7 +27,7 @@ const OrderPlace = () => {
     // console.log(data);
     delete data._id;
     // post order
-    axios.post("http://localhost:5000/orders", data).then((res) => {
+    axios.post("https://machine-learning-startup.herokuapp.com/orders", data).then((res) => {
       console.log(res.data);
       if (res.data.insertedId) {
         Swal.fire({
@@ -48,9 +48,9 @@ const OrderPlace = () => {
       <div className="login register-card ">
         <h3 className="text-muted text-center my-3">Order Information</h3>
         <form style={{ margin: "0 auto" }} onSubmit={handleSubmit(onSubmit)}>
-          <input defaultValue={user?.displayName} type="text" {...register("userName", { required: true })} />
-          <input defaultValue={user?.email} type="email" {...register("email")} />
-          <input defaultValue={product.price} type="number" {...register("price")} />
+          <input defaultValue={product.name} type="text" {...register("userName", { required: true })} />
+          <input placeholder="Email" defaultValue={user?.email} type="email" {...register("email")} />
+          <input defaultValue={product.price} type="number" {...register("price", { required: true })} />
           <input defaultValue={product.img} {...register("img")} />
           <input placeholder="Phone Number" type="text" {...register("phone", { required: true })} />{" "}
           <textarea className="textarea" placeholder="Your Address" type="text" {...register("address", { required: true })} />

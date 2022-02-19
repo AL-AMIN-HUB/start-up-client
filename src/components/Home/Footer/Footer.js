@@ -29,27 +29,30 @@ const Footer = () => {
       <div style={{ ...bg, color: "#6D8FAC", cursor: "pointer" }} className="row container mx-auto">
         <div className="col-md-3 col-6">
           <div>
+            <h4 className="text-dark ">
+              Machine <span className="text-warning">Learning</span>{" "}
+            </h4>
+
             <img
-              className="img-fluid"
-              style={{ width: "120px" }}
+              className="img-fluid mt-0"
+              style={{ width: "150px" }}
               src="https://i.ibb.co/s6NYJLP/26-Able-to-Survive-during-the-Pandemic-Investors-Aim-for-Local-Startups-removebg-preview.png"
               alt=""
             />
-            <p style={{ textAlign: "justify" }}>
-              <small>
-                To keep up with the requirements of the job, the entrepreneur has to know something of everything. This can be accomplished by being
-                involved with the right people who’ve had enough practice and excellent work experience,
-              </small>
+            <p style={{ textAlign: "justify", marginTop:'10px' }}>
+              <small>To keep up with the requirements of the job, the entrepreneur has to know something of everything.</small>
             </p>
           </div>
         </div>
-        <div className="col-md-3 col-6">
-          <h4 className="text-dark ">Company</h4>
-          <li className="list-unstyled mt-2">About us</li>
-          <li className="list-unstyled mt-2">Features</li>
-          <li className="list-unstyled mt-2">Services</li>
-          <li className="list-unstyled mt-2">Our Pricing</li>
-          <li className="list-unstyled mt-2">Latest News</li>
+        <div className="col-md-3 col-6 text-center">
+          <div>
+            <h4 className="text-dark ">Company</h4>
+            <li className="list-unstyled mt-2">About us</li>
+            <li className="list-unstyled mt-2">Features</li>
+            <li className="list-unstyled mt-2">Services</li>
+            <li className="list-unstyled mt-2">Our Pricing</li>
+            <li className="list-unstyled mt-2">Latest News</li>
+          </div>
         </div>
         <div className="col-md-3 col-6">
           <h4 className="text-dark">Support</h4>

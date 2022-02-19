@@ -29,7 +29,6 @@ const Dashboard = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  // const { logout } = useFirebase();
   const drawer = (
     <div>
       <Toolbar sx={{ background: "#041c3b" }} />

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
@@ -16,34 +16,52 @@ import ProductsDetails from "./components/Shop/ProductsDetails/ProductsDetails";
 import OrderPlace from "./components/OrderPlace/OrderPlace";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Orders from "./components/Orders/Orders";
+import AuthProvider from "./context/AuthProvider";
+import PrivateRoute from "./components/Shared/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Menubar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="services" element={<Services />} />
+      <AuthProvider>
+        <Router>
+          <Menubar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="shop" element={<Shop />} />
+            <Route path="services" element={<Services />} />
 
-          <Route path="productsDetails/:productId" element={<ProductsDetails />} />
-          <Route path="orderPlace/:productId" element={<OrderPlace />} />
-          <Route path="/dashboard" element={<Dashboard />}>
-            <Route path="/dashboard" element={<Orders />} />
-            <Route path={`/dashboard/allOrders`} element={<Orders />} />
-          </Route>
-          <Route path="contact" element={<Contact />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="singleService/:id" element={<SingleService />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+            <Route path="productsDetails/:productId" element={<ProductsDetails />} />
+            <Route
+              path="orderPlace/:productId"
+              element={
+                <PrivateRoute>
+                  <OrderPlace />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            >
+              <Route path="/dashboard" element={<Orders />} />
+              <Route path={`/dashboard/allOrders`} element={<Orders />} />
+            </Route>
+            <Route path="contact" element={<Contact />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="singleService/:id" element={<SingleService />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
