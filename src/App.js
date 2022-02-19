@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
-import Blog from "./components/Blog/Blog";
+import Blog from "./components/Dashboard/Dashboard";
 import Contact from "./components/Contact/Contact";
 import Error from "./components/Home/Error/Error";
 import Footer from "./components/Home/Footer/Footer";
@@ -27,7 +27,7 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="services" element={<Services />} />
           <Route path="productsDetails/:productId" element={<ProductsDetails />} />
-          <Route path="blog" element={<Blog />} />
+          <Route path="dashboard" element={<Blog />} />
           <Route path="contact" element={<Contact />} />
           <Route path="cart" element={<Cart />} />
           <Route path="singleService/:id" element={<SingleService />} />

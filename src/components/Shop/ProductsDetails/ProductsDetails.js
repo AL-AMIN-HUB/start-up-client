@@ -7,7 +7,7 @@ const ProductsDetails = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/products/${productId}`;
+    const url = `https://machine-learning-startup.herokuapp.com/products/${productId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -30,12 +30,12 @@ const ProductsDetails = () => {
         <h2 className="banner-text">Your Product Cart</h2>
       </div>
       <div style={{ padding: "50px" }} className="container">
-        <div class="row ">
-          <div class="col-12 col-md-7 text-center">
+        <div className="row ">
+          <div className="col-12 col-md-7 text-center">
             {" "}
             <img className="img-fluid mb-5 mb-md-0 w-50" src={product.img} alt="" />
           </div>
-          <div class="col-12 col-md-5">
+          <div className="col-12 col-md-5">
             <h3 className="fw-bold">{product.name}</h3>
             <div className="serviceLine">
               <div className="lineAnimation"></div>

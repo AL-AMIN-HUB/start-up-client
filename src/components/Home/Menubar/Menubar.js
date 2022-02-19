@@ -15,7 +15,6 @@ const Menubar = () => {
     }
   };
   window.addEventListener("scroll", changeBg);
-
   return (
     <div>
       <Navbar style={{ height: "80px" }} className="navbar" bg={navbar ? "light" : "transparent"} collapseOnSelect expand="lg" variant="light">
@@ -79,29 +78,21 @@ const Menubar = () => {
                     ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
                     : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
                 }
-                to="/blog"
-              >
-                Blog
-              </NavLink>
-              <NavLink
-                className={(navInfo) =>
-                  navInfo.isActive
-                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
-                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
-                }
                 to="/contact"
               >
                 Contact
               </NavLink>
               {user?.email ? (
                 <>
-                  <NavLink to="/cart">
-                    <div class="position-relative">
-                      <i class="fa fa-shopping-cart fs-3 pt-4 text-warning"></i>
-                      <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
-                        1<span class="visually-hidden">unread messages</span>
-                      </span>
-                    </div>
+                  <NavLink
+                    className={(navInfo) =>
+                      navInfo.isActive
+                        ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
+                        : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                    }
+                    to="/dashboard"
+                  >
+                    Dashboard
                   </NavLink>
 
                   <Button onClick={logout} className="primary-btn2 ms-5">
