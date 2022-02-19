@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
-import Blog from "./components/Dashboard/Dashboard";
 import Contact from "./components/Contact/Contact";
 import Error from "./components/Home/Error/Error";
 import Footer from "./components/Home/Footer/Footer";
@@ -15,6 +14,8 @@ import Shop from "./components/Shop/Shop";
 import Cart from "./components/Cart/Cart";
 import ProductsDetails from "./components/Shop/ProductsDetails/ProductsDetails";
 import OrderPlace from "./components/OrderPlace/OrderPlace";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Orders from "./components/Orders/Orders";
 
 function App() {
   return (
@@ -30,7 +31,10 @@ function App() {
 
           <Route path="productsDetails/:productId" element={<ProductsDetails />} />
           <Route path="orderPlace/:productId" element={<OrderPlace />} />
-          <Route path="dashboard" element={<Blog />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="/dashboard" element={<Orders />} />
+            <Route path={`/dashboard/allOrders`} element={<Orders />} />
+          </Route>
           <Route path="contact" element={<Contact />} />
           <Route path="cart" element={<Cart />} />
           <Route path="singleService/:id" element={<SingleService />} />

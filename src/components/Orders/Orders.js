@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
+import MyOrders from "./MyOrders/MyOrders";
 
 const Orders = () => {
-  const [order, setOrder] = useState({});
+  const [orders, setOrders] = useState([]);
+  console.log(orders);
 
   useEffect(() => {
     fetch("http://localhost:5000/allOrders")
       .then((res) => res.json())
-      .then((data) => setOrder(data));
+      .then((data) => setOrders(data));
   }, []);
   return (
     <div>
-      <p>{order.name}</p>
+      {orders.map((order) => (
+        <MyOrders order={order} key={order._id}></MyOrders>
+      ))}
     </div>
   );
 };
