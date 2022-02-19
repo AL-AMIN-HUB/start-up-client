@@ -43,7 +43,7 @@ const Home = () => {
         <NewsLetter />
       </div>
       <button style={{ border: "none" }} className={visible ? "gotoUp" : ""} onClick={scrollTop}>
-        <i className="fas  fa-arrow-up"></i>
+        <i className="fas  fa-arrow-up"></i> 
       </button>
     </>
   );

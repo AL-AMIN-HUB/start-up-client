@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://lit-woodland-97376.herokuapp.com/products")
+    fetch("https://machine-learning-startup.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -25,7 +26,7 @@ const Shop = () => {
 
       <div className="container row g-4 mx-auto py-5">
         {products.map((product) => (
-          <div key={product.id} className="col col-lg-3 col-md-4 col-12">
+          <div key={product._id} className="col col-lg-3 col-md-4 col-12">
             <div className="card border-0 h-100 box">
               <img className="img-fluid img" src={product.img} alt="" />
               <div className="text-center">
@@ -33,7 +34,9 @@ const Shop = () => {
                 <p>${product.price}</p>
                 <Rating initialRating={product.rating} emptySymbol="far fa-star rating-color" fullSymbol="fas fa-star rating-color" readonly></Rating>
               </div>
-              <button className="btn-shop">ADD TO CART</button>
+              <Link style={{ textDecoration: "none" }} to={`/productsDetails/${product._id}`}>
+                <button className="btn-shop">ADD TO CART</button>
+              </Link>
             </div>
           </div>
         ))}

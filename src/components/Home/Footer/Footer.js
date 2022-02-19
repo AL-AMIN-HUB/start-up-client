@@ -31,11 +31,11 @@ const Footer = () => {
           <div>
             <img
               className="img-fluid"
-              style={{ width: "100px" }}
+              style={{ width: "120px" }}
               src="https://i.ibb.co/s6NYJLP/26-Able-to-Survive-during-the-Pandemic-Investors-Aim-for-Local-Startups-removebg-preview.png"
               alt=""
             />
-            <p>
+            <p style={{ textAlign: "justify" }}>
               <small>
                 To keep up with the requirements of the job, the entrepreneur has to know something of everything. This can be accomplished by being
                 involved with the right people who’ve had enough practice and excellent work experience,
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-md-3 col-6">
-          <h4 className="text-dark">Company</h4>
+          <h4 className="text-dark ">Company</h4>
           <li className="list-unstyled mt-2">About us</li>
           <li className="list-unstyled mt-2">Features</li>
           <li className="list-unstyled mt-2">Services</li>

@@ -6,7 +6,7 @@ const SingleService = () => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    const url = `https://lit-woodland-97376.herokuapp.com/services/${id}`;
+    const url = `https://machine-learning-startup.herokuapp.com/services/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setService(data));

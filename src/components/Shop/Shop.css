@@ -18,6 +18,7 @@
   transform: scale(1.05);
 }
 .btn-shop {
+  width: 100%;
   border: 1px solid #111;
   background-color: #fff;
   transition: 1s;
