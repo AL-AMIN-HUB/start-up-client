@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Rating from "react-rating";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ProductsDetails = () => {
   const { productId } = useParams();
@@ -56,7 +56,9 @@ const ProductsDetails = () => {
               </p>
               <Rating initialRating={product.rating} emptySymbol="far fa-star rating-color" fullSymbol="fas fa-star rating-color" readonly></Rating>
             </div>
-            <button className="btn btn-danger mt-3">Purchase Now</button>
+            <Link style={{ textDecoration: "none" }} to={`/orderPlace/${product._id}`}>
+              <button className="btn btn-danger mt-3">Purchase Now</button>
+            </Link>
           </div>
         </div>
       </div>

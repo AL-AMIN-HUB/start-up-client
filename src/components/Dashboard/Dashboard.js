@@ -42,12 +42,14 @@ const Dashboard = (props) => {
             <ListItemText>Home</ListItemText>{" "}
           </ListItem>{" "}
         </Link>
-        <ListItem button>
-          <ListItemIcon>
-            <ShoppingCart />
-          </ListItemIcon>
-          <ListItemText>Orders</ListItemText>
-        </ListItem>{" "}
+        <Link to="/dashboard/orders" style={{ textDecoration: "none", color: "black" }}>
+          <ListItem button>
+            <ListItemIcon>
+              <ShoppingCart />
+            </ListItemIcon>
+            <ListItemText>Orders</ListItemText>
+          </ListItem>{" "}
+        </Link>
         <ListItem button>
           <ListItemIcon>
             <ReviewsIcon />

@@ -10,7 +10,8 @@ const Login = () => {
   const onSubmit = (data) => console.log(data);
 
   const bg = {
-    background: "url(https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F4357049%2Fde0bcb471b4c596efff161108f0ee76f%2Ftopic.jpg?generation=1595314580690707&alt=media)",
+    background:
+      "url(https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F4357049%2Fde0bcb471b4c596efff161108f0ee76f%2Ftopic.jpg?generation=1595314580690707&alt=media)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -26,6 +27,7 @@ const Login = () => {
             alt=""
           />
           <h3 className="text-muted text-center my-3">User Login</h3>
+          <p className="text-center text-danger fw-bold">Please sign in google/github now</p>
           <input type="email" placeholder="Email Address" {...register("email", { required: true })} />
           <input type="password" placeholder="Password" {...register("password")} /> <input value="Click to login" type="submit" />
         </form>
