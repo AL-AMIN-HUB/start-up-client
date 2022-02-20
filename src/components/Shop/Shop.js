@@ -31,7 +31,7 @@ const Shop = () => {
         {products.map((product) => (
           <div key={product._id} className="col col-lg-3 col-md-4 col-12">
             <div className="card border-0 h-100 box">
-              <img className="img-fluid img" src={product.img} alt="" />
+              <img style={{ width: "290px", height: "360px" }} className="img-fluid img" src={product.img} alt="" />
               <div className="text-center">
                 <h5 className="mt-4 mb-2">{product.name}</h5>
                 <p>${product.price}</p>
