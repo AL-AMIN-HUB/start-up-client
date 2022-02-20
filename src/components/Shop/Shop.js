@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+
 import "./Shop.css";
 
 const Shop = () => {
@@ -40,6 +43,9 @@ const Shop = () => {
             </div>
           </div>
         ))}
+        <Stack spacing={2}>
+          <Pagination count={10} variant="outlined" color="primary" />
+        </Stack>
       </div>
     </div>
   );
