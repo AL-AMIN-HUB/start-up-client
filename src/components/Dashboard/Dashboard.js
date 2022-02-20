@@ -18,6 +18,7 @@ import ReviewsIcon from "@mui/icons-material/Reviews";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Link, Outlet } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 // import useFirebase from "../../hooks/useFirebase";
 
 const drawerWidth = 240;
@@ -29,6 +30,8 @@ const Dashboard = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const { logout } = useAuth();
   const drawer = (
     <div>
       <Toolbar sx={{ background: "#041c3b" }} />
@@ -55,17 +58,23 @@ const Dashboard = (props) => {
           </ListItemIcon>
           <ListItemText>Review</ListItemText>{" "}
         </ListItem>{" "}
-        <ListItem button>
-          <ListItemIcon>
-            <AddShoppingCartIcon />
-          </ListItemIcon>
-          <ListItemText>Shopping</ListItemText>
-        </ListItem>
+        <Link to="/shop" style={{ textDecoration: "none", color: "black" }}>
+          <ListItem button>
+            <ListItemIcon>
+              <AddShoppingCartIcon />
+            </ListItemIcon>
+            <ListItemText>Shopping</ListItemText>
+          </ListItem>
+        </Link>
         <ListItem button>
           <ListItemIcon>
             <LogoutIcon />
           </ListItemIcon>
-          <ListItemText>Logout</ListItemText>
+          <ListItemText>
+            <button onClick={logout} className="btn-1 px-4 py-2">
+              Logout
+            </button>
+          </ListItemText>
         </ListItem>
       </List>
     </div>

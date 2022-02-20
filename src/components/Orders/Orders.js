@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
+import useAuth from "../../hooks/useAuth";
 import MyOrders from "./MyOrders/MyOrders";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
-
+  const { user } = useAuth();
   useEffect(() => {
-    fetch("https://machine-learning-startup.herokuapp.com/allOrders")
+    const url = `https://machine-learning-startup.herokuapp.com/allOrders/${user.email}`;
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => setOrders(data));
-  }, []);
+      .then((data) => {
+        setOrders(data);
+      });
+  }, [user?.email]);
+
   const bg = {
     background: "url(https://i.ibb.co/qxJNKn0/banner-bg1.jpg)",
     backgroundPosition: "center",
@@ -17,6 +22,7 @@ const Orders = () => {
     backgroundAttachment: "fixed",
     height: "200px",
   };
+
   return (
     <div>
       <div style={{ ...bg }} className="banner">
