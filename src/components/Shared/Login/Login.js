@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import "./Login.css";
 
@@ -8,6 +8,11 @@ const Login = () => {
   const { googleSignIn, githubSignIn } = useAuth();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const handleGoogleButton = () => {
+    googleSignIn(navigate, location);
+  };
 
   const bg = {
     background:
@@ -39,7 +44,7 @@ const Login = () => {
         </p>
         <p className="other-login para fs-5 text-center">------------- Or SignIn With -------------</p>
         <div className="text-center">
-          <button onClick={googleSignIn} className="btn btn-outline-light py-3 px-4 shadow-sm me-2">
+          <button onClick={handleGoogleButton} className="btn btn-outline-light py-3 px-4 shadow-sm me-2">
             {" "}
             <img
               className="img-fluid"

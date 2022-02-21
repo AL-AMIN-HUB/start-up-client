@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./OrderPlace.css";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const OrderPlace = () => {
@@ -11,6 +11,7 @@ const OrderPlace = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
   const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate();
 
   //
   useEffect(() => {
@@ -38,7 +39,7 @@ const OrderPlace = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-        // history.push(url);
+        navigate("/dashboard/allOrders");
       }
     });
     reset();

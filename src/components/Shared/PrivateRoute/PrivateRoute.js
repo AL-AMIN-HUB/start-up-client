@@ -1,4 +1,3 @@
-import { CircularProgress, Stack } from "@mui/material";
 import React from "react";
 import { Navigate, useLocation } from "react-router";
 import useAuth from "../../../hooks/useAuth";
@@ -8,9 +7,9 @@ const PrivateRoute = ({ children, ...rest }) => {
   let location = useLocation();
   if (isLoading) {
     return (
-      <Stack sx={{ color: "grey.500" }} spacing={2} direction="row">
-        <CircularProgress color="success" />
-      </Stack>
+      <div class="d-flex justify-content-center" style={{ paddingTop: "300px" }}>
+        <div class="spinner-border text-success" style={{ width: "3rem", height: " 3rem" }} role="status"></div>
+      </div>
     );
   }
   //
