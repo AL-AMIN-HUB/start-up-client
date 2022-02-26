@@ -25,6 +25,7 @@ const OrderPlace = () => {
 
   //
   const onSubmit = (data) => {
+    let timerInterval;
     // console.log(data);
     delete data._id;
     // post order
@@ -32,12 +33,25 @@ const OrderPlace = () => {
       console.log(res.data);
       if (res.data.insertedId) {
         Swal.fire({
-          position: "top-end",
-          icon: "success",
-          text: "We have received your order. You can see your order on the dashboard",
           title: "Your order has been pending",
-          showConfirmButton: false,
-          timer: 1500,
+          html: "We have received your order. You can see your order on the <b></b> dashboard.",
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const b = Swal.getHtmlContainer().querySelector("b");
+            timerInterval = setInterval(() => {
+              b.textContent = Swal.getTimerLeft();
+            }, 2000);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+          },
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log("OK");
+          }
         });
         navigate("/dashboard/allOrders");
       }

@@ -19,7 +19,6 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Link, Outlet } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-// import useFirebase from "../../hooks/useFirebase";
 
 const drawerWidth = 240;
 
