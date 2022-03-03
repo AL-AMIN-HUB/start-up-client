@@ -57,7 +57,7 @@ const Dashboard = (props) => {
           </ListItemIcon>
           <ListItemText>Review</ListItemText>{" "}
         </ListItem>{" "}
-        <Link to="/shop" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/products" style={{ textDecoration: "none", color: "black" }}>
           <ListItem button>
             <ListItemIcon>
               <AddShoppingCartIcon />

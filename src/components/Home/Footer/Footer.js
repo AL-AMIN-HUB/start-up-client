@@ -29,17 +29,13 @@ const Footer = () => {
       <div style={{ ...bg, color: "#6D8FAC", cursor: "pointer" }} className="row container mx-auto">
         <div className="col-md-3 col-6">
           <div>
-            <h4 className="text-dark ">
-              Machine <span className="text-warning">Learning</span>{" "}
-            </h4>
-
             <img
               className="img-fluid mt-0"
               style={{ width: "150px" }}
-              src="https://i.ibb.co/s6NYJLP/26-Able-to-Survive-during-the-Pandemic-Investors-Aim-for-Local-Startups-removebg-preview.png"
+              src="https://i.ibb.co/pLd7Psj/xlogo-png-pagespeed-ic-TPJc-IPa4-Tw.webp"
               alt=""
             />
-            <p style={{ textAlign: "justify", marginTop:'10px' }}>
+            <p style={{ textAlign: "justify", marginTop: "10px" }}>
               <small>To keep up with the requirements of the job, the entrepreneur has to know something of everything.</small>
             </p>
           </div>

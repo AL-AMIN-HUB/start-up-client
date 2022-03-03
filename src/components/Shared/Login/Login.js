@@ -15,8 +15,7 @@ const Login = () => {
   };
 
   const bg = {
-    background:
-      "url(https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F4357049%2Fde0bcb471b4c596efff161108f0ee76f%2Ftopic.jpg?generation=1595314580690707&alt=media)",
+    background: "url(https://i.ibb.co/BgNSWxS/sea-coffee-morning-breakfast-1.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",

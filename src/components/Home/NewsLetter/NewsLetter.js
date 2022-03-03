@@ -3,8 +3,8 @@ import "./NewsLetter.css";
 
 const NewsLetter = () => {
   return (
-    <div className="history-card py-3">
-      <div className="row w-75 mx-auto ">
+    <div className="history-card py-5">
+      <div className="row w-75 mx-auto py-5">
         <div className="col-md-6 col-12">
           <img className="img-fluid" src="https://i.ibb.co/JQVn8qQ/free-trial-img.png" alt="" />
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const banner = {
   backgroundImage: "url(https://i.ibb.co/xGbGtY6/banner-bg.jpg)",
@@ -17,7 +18,9 @@ const Banner = () => {
                 <p className="text-muted my-5">
                   Entrepreneurs and startup founders wear many hats because it is expected of them. They start out with organizing the company.
                 </p>
-                <button className="primary-btn1">Get Started</button>
+                <Link to="/products">
+                  <button className="primary-btn2">Get Started</button>
+                </Link>
               </div>
             </div>
           </div>

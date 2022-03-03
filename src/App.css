@@ -24,6 +24,8 @@
   position: relative;
   z-index: 1;
   border-radius: 4px;
+  outline: none;
+  border: none;
 }
 .primary-btn2 {
   background-color: #c679e3 !important;

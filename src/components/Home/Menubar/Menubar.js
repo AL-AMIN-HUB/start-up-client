@@ -20,12 +20,7 @@ const Menubar = () => {
       <Navbar style={{ height: "80px" }} className="navbar" bg={navbar ? "light" : "transparent"} collapseOnSelect expand="lg" variant="light">
         <Container>
           <Navbar.Brand>
-            <img
-              className="img-fluid"
-              style={{ width: "100px" }}
-              src="https://i.ibb.co/s6NYJLP/26-Able-to-Survive-during-the-Pandemic-Investors-Aim-for-Local-Startups-removebg-preview.png"
-              alt=""
-            />
+            <img className="img-fluid" style={{ width: "100px" }} src="https://i.ibb.co/pLd7Psj/xlogo-png-pagespeed-ic-TPJc-IPa4-Tw.webp" alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -35,8 +30,8 @@ const Menubar = () => {
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive
-                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
-                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-info fs-6"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-primary fs-6"
                 }
                 to="/home"
               >
@@ -45,8 +40,8 @@ const Menubar = () => {
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive
-                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
-                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-info fs-6"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-primary fs-6"
                 }
                 to="/about"
               >
@@ -55,28 +50,29 @@ const Menubar = () => {
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive
-                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
-                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-info fs-6"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-primary fs-6"
+                }
+                to="/products"
+              >
+                Products
+              </NavLink>
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-info fs-6"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-primary fs-6"
                 }
                 to="/services"
               >
-                Services
+                Support Service
               </NavLink>
+
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive
-                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
-                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
-                }
-                to="/shop"
-              >
-                Shop
-              </NavLink>
-              <NavLink
-                className={(navInfo) =>
-                  navInfo.isActive
-                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
-                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                    ? "text-decoration-none mx-3 display-inline-block  pt-4  text-info fs-6"
+                    : "text-decoration-none mx-3 display-inline-block  pt-4  text-primary fs-6"
                 }
                 to="/contact"
               >
@@ -87,8 +83,8 @@ const Menubar = () => {
                   <NavLink
                     className={(navInfo) =>
                       navInfo.isActive
-                        ? "text-decoration-none mx-3 display-inline-block  pt-4  text-danger fw-bold"
-                        : "text-decoration-none mx-3 display-inline-block  pt-4  text-info"
+                        ? "text-decoration-none mx-3 display-inline-block  pt-4  text-info fs-6"
+                        : "text-decoration-none mx-3 display-inline-block  pt-4  text-primary fs-6"
                     }
                     to="/dashboard"
                   >
@@ -101,7 +97,7 @@ const Menubar = () => {
                 </>
               ) : (
                 <NavLink to="/login">
-                  <Button className="primary-btn2">LOGIN</Button>
+                  <Button className="primary-btn3">LOGIN</Button>
                 </NavLink>
               )}
             </Nav>

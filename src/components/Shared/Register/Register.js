@@ -15,7 +15,7 @@ const Register = () => {
     reset();
   };
   const bg = {
-    background: "url(https://cdn.analyticsvidhya.com/wp-content/uploads/2019/11/chi-square-scaled.jpg)",
+    background: "url(https://images.squarespace-cdn.com/content/v1/562584abe4b08b3753654f5a/1543006439810-WPIB7RH0ZKSFNDNC2MM1/IMG-1437.JPG)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
