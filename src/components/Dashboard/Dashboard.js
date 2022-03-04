@@ -19,6 +19,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Link, Outlet } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const drawerWidth = 240;
 
@@ -30,6 +31,19 @@ const Dashboard = (props) => {
     setMobileOpen(!mobileOpen);
   };
 
+  // handleClick review
+  const handleClick = () => {
+    Swal.fire({
+      title: "Working!",
+      text: "This feature is coming soon🥰",
+      showClass: {
+        popup: "animate__animated animate__fadeInDown",
+      },
+      hideClass: {
+        popup: "animate__animated animate__fadeOutUp",
+      },
+    });
+  };
   const { logout } = useAuth();
   const drawer = (
     <div>
@@ -55,7 +69,7 @@ const Dashboard = (props) => {
           <ListItemIcon>
             <ReviewsIcon />
           </ListItemIcon>
-          <ListItemText>Review</ListItemText>{" "}
+          <ListItemText onClick={handleClick}>Review</ListItemText>{" "}
         </ListItem>{" "}
         <Link to="/products" style={{ textDecoration: "none", color: "black" }}>
           <ListItem button>

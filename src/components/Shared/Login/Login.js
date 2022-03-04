@@ -27,7 +27,7 @@ const Login = () => {
           <img
             className="img-fluid mx-auto"
             style={{ width: "100px" }}
-            src="https://i.ibb.co/s6NYJLP/26-Able-to-Survive-during-the-Pandemic-Investors-Aim-for-Local-Startups-removebg-preview.png"
+            src="https://i.ibb.co/pLd7Psj/xlogo-png-pagespeed-ic-TPJc-IPa4-Tw.webp"
             alt=""
           />
           <h3 className="text-muted text-center my-3">User Login</h3>

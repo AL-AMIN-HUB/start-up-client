@@ -35,7 +35,7 @@ const OrderPlace = () => {
         Swal.fire({
           title: "Your order has been pending",
           html: "We have received your order. You can see your order on the <b></b> dashboard.",
-          timer: 2000,
+          timer: 1500,
           timerProgressBar: true,
           didOpen: () => {
             Swal.showLoading();

@@ -114,7 +114,7 @@ const Menubar = () => {
                         "aria-labelledby": "basic-button",
                       }}
                     >
-                      <MenuItem onClick={handleClose}>Profile</MenuItem>
+                      <MenuItem onClick={handleClose}>{user.displayName}</MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
                         <Link to="/dashboard" style={{ textDecoration: "none", color: "black" }}>
@@ -129,7 +129,7 @@ const Menubar = () => {
                 </>
               ) : (
                 <NavLink to="/login">
-                  <Button className="primary-btn3">LOGIN</Button>
+                  <button className="login-button">LOGIN</button>
                 </NavLink>
               )}
             </Nav>

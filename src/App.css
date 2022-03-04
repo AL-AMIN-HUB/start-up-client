@@ -263,3 +263,31 @@ scroll bar */
 .active-content {
   display: block;
 }
+
+/* dashboard button */
+.btn-1 {
+  background-color: rgba(128, 128, 128, 0.233);
+  transition: 0.5s;
+  border-radius: 8px;
+  border: none;
+}
+.btn-1:hover {
+  background-color: #041c3b;
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.btn-2 {
+  background-color: rgba(128, 128, 128, 0.233);
+  transition: 0.5s;
+  border-radius: 8px;
+  border: none;
+  margin-top: 17px;
+  padding: 5px 15px;
+}
+
+.btn-2:hover {
+  background-color: #041c3bc7;
+  transform: scale(0.8);
+  color: #fff;
+}
